@@ -1,0 +1,18 @@
+- Create a lambda function 
+  - Author from scratch
+  - Python 3.11
+  Change Default execution role
+     - use existing role and choose lambda-ec2-fullaccess
+
+- Code # go to this code section(click on your function which you have created and go below)
+  - Inside the code section paste the code.py code which is outside in this repo.
+  - Click on deploy i.e there in the right side of the test(blue) button.
+
+- Add trigger(in the top of your function page)
+  - Select EventBridge (CloudWatch Events) as a source 
+  - Choose Create a new rule 
+     - Give a rule name
+     - Choose "Schedule expression" in Rule Type
+         - Give cron(30 11 * * ? *) inside it #here this expression is indicating the time(in UTC) at which we want to trigger the event. It is 5 PM in IST.
+  - Click on Add 
+
